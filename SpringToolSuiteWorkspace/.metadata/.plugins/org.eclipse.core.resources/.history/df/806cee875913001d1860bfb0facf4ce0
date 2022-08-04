@@ -1,0 +1,12 @@
+package com.BrandonHellwarth.ZooKeeper;
+
+public class Bat extends Mammal {
+	public Bat() {
+		this.energyLevel = 300;
+	}
+	public int fly() {
+		System.out.println("A bat takes flight...");
+		energyLevel -= 50;
+		return energyLevel;
+	}
+}

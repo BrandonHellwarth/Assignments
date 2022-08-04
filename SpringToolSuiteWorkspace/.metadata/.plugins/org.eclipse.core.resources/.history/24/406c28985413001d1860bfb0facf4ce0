@@ -1,0 +1,10 @@
+package com.BrandonHellwarth.ZooKeeper;
+
+public class TestGorilla {
+
+	public static void main(String[] args) {
+		Gorilla John = new Gorilla();
+		John.throwSomething();
+	}
+
+}

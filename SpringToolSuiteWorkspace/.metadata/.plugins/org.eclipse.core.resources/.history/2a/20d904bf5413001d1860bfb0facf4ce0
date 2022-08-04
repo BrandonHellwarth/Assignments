@@ -1,0 +1,11 @@
+package com.BrandonHellwarth.ZooKeeper;
+
+public class Gorilla extends Mammal{
+	public Gorilla() {}
+	
+	public int throwSomething() {
+		System.out.println("Gorilla throw object!");
+		super.energyLevel - 5;
+		return super.energyLevel;
+	}
+}

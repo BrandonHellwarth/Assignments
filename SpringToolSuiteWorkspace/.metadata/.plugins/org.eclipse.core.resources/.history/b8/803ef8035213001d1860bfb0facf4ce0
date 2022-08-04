@@ -1,0 +1,14 @@
+package com.BrandonHellwarth.ZooKeeper;
+
+public class Bat {
+	private String name;
+	private int energyLevel = 300;
+	
+	public Bat(String name) {
+		this.name = name;
+	}
+	
+	public int fly() {
+		System.out.println("Sound of a bat")
+	}
+}

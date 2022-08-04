@@ -1,0 +1,10 @@
+package com.BrandonHellwarth.BlackJack;
+
+public class TestDeck {
+
+	public static void main(String[] args) {
+		int rand = (int)((Math.random() * 51));
+		System.out.println(rand);
+	}
+
+}

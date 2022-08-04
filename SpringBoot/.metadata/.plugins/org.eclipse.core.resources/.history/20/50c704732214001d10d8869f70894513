@@ -1,0 +1,15 @@
+package com.BrandonHellwarth.BlackJack;
+
+import java.util.ArrayList;
+
+public class TestDeck {
+
+	public static void main(String[] args) {
+//		Deck deck = new Deck();
+//		deck.shuffle();
+		ArrayList<Integer> newarr = new ArrayList<Integer>();
+		newarr.add(2);
+		System.out.println(newarr.get(1));
+	}
+
+}
