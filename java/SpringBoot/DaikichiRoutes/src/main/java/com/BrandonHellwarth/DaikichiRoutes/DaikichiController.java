@@ -6,6 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DaikichiController {
+	@RequestMapping("/")
+	public String index() {
+		return "index";
+	}
 	@RequestMapping("/daikichi")
 	public String welcome() {
 		return "Welcome!";

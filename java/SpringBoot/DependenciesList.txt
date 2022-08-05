@@ -1,0 +1,18 @@
+Spring Boot Dependencies:
+-Jasper
+        <dependency>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>tomcat-embed-jasper</artifactId>
+        </dependency>
+
+-JSTL
+        <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+        </dependency>
+
+-C:out (goes in jsp file)
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
+
+-inside application properties:
+spring.mvc.view.prefix=/WEB-INF/
