@@ -1,9 +1,0 @@
-package com.caresoft.clinicapp;
-
-public class TestUser {
-
-	public static void main(String[] args) {
-		System.out.print((int) (Math.log10(4567) + 1));
-	}
-
-}
