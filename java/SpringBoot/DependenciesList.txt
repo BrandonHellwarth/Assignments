@@ -30,10 +30,15 @@ Spring Boot Dependencies:
 		<artifactId>spring-boot-starter-validation</artifactId>
 	</dependency>
 
--C:out (goes in jsp file)
+Goes in jsp file:
+-C:out
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
+-form:form
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+-errors
+<%@ page isErrorPage="true" %>
 
--inside application properties:
+inside application properties:
 //jsp file location
 spring.mvc.view.prefix=/WEB-INF/
 //MySQL Connection
