@@ -30,6 +30,18 @@ Spring Boot Dependencies:
 		<artifactId>spring-boot-starter-validation</artifactId>
 	</dependency>
 
+-jbcrypt
+	<dependency>
+            <groupId>org.mindrot</groupId>
+            <artifactId>jbcrypt</artifactId>
+            <version>0.4</version>
+        </dependency>
+
+-authentications
+	<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
 Goes in jsp file:
 -C:out
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core"%>
