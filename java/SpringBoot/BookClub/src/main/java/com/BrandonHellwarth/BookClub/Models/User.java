@@ -1,4 +1,4 @@
-package com.BrandonHellwarth.LoginAndRegistration.Models;
+package com.BrandonHellwarth.BookClub.Models;
 
 import java.util.Date;
 

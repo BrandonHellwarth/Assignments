@@ -1,4 +1,4 @@
-package com.BrandonHellwarth.LoginAndRegistration.Controllers;
+package com.BrandonHellwarth.BookClub.Controllers;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -13,10 +13,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.BrandonHellwarth.LoginAndRegistration.Models.LoginUser;
-import com.BrandonHellwarth.LoginAndRegistration.Models.User;
-import com.BrandonHellwarth.LoginAndRegistration.Repositories.UserRepository;
-import com.BrandonHellwarth.LoginAndRegistration.Services.UserService;
+import com.BrandonHellwarth.BookClub.Models.LoginUser;
+import com.BrandonHellwarth.BookClub.Models.User;
+import com.BrandonHellwarth.BookClub.Repositories.UserRepository;
+import com.BrandonHellwarth.BookClub.Services.UserService;
 
 @Controller
 public class UserController {

@@ -1,4 +1,4 @@
-package com.BrandonHellwarth.LoginAndRegistration.Services;
+package com.BrandonHellwarth.BookClub.Services;
 
 import java.util.Optional;
 
@@ -7,9 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 
-import com.BrandonHellwarth.LoginAndRegistration.Models.LoginUser;
-import com.BrandonHellwarth.LoginAndRegistration.Models.User;
-import com.BrandonHellwarth.LoginAndRegistration.Repositories.UserRepository;
+import com.BrandonHellwarth.BookClub.Models.LoginUser;
+import com.BrandonHellwarth.BookClub.Models.User;
+import com.BrandonHellwarth.BookClub.Repositories.UserRepository;
 
 @Service
 public class UserService {
