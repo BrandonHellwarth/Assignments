@@ -13,10 +13,11 @@ const Person = props => {
     const [confirmPasswordError, setConfirmPasswordError] = useState("");
     const pw = useRef();
 
+//use === for comparisons
 
     const handleFirstName = (e) => {
         setFirstName(e.target.value);
-        if(e.target.value.length == 0){
+        if(e.target.value.length === 0){
             setFirstNameError("");
         }
         else if(e.target.value.length < 2){
@@ -88,11 +89,14 @@ const Person = props => {
         <form>
             <div>
                 <label>First Name: </label>
-                <input type="text" onChange={ handleFirstName }></input>
+                <input type="text" onChange={ handleFirstName }/>
+                {//if left side is true return right, if falsey returns left
+                    firstNameError.length > 0 &&
+                    <p>{ firstNameError }</p> 
+                }
                 {
-                    firstNameError ?
-                    <p>{ firstNameError }</p> : 
-                    ''
+                    firstNameError &&
+                    <p>{ firstNameError }</p> 
                 }
             </div>
             <div>
