@@ -6,7 +6,7 @@ export default () => {
     const [description, setDescription] = useState("");
 
     const onSubmitHandler = e => {
-        e.preventDefault();
+        // e.preventDefault(); //how to display new product without page refresh?
         axios.post('http://localhost:8000/api/products/create', {
             title,
             price,

@@ -16,11 +16,15 @@ const Main = (props) => {
             .catch(err => console.error(err));
     }, []);
 
+    const removeFromDom = productId => {
+        setProducts(products.filter(product => product._id != productId));
+    }
+
     return (
         <div>
             <ProductForm/>
             <hr/>
-            {loaded && <ProductList products={products}/>}
+            {loaded && <ProductList products={products} removeFromDom={removeFromDom}/>}
         </div>
     )
 }
