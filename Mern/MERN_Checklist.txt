@@ -1,0 +1,38 @@
+MERN New Project instructions:
+1.
+create new folder (project name)
+2.
+npm init -y
+3.
+npm install express
+npm install mongoose
+npm install cors
+5.
+create new file called server.js and add:
+const express = require('express');
+const cors = require('cors')
+const app = express();
+require('./server/config/mongoose.config');
+app.use(cors())
+app.use(express.urlencoded({ extended: true }));
+require('./server/routes/author.routes')(app);
+const port = 8000;
+    
+app.listen(port, () => console.log(`Listening on port: ${port}`) );
+6.
+create server folder with config, controllers, models, and routes folders as children
+7.
+npx create-react-app client
+8.
+(install in client directory)
+npm install axios
+npm install react-router-dom
+9.
+Mongoose.config.js
+const mongoose = require('mongoose');
+mongoose.connect("mongodb://localhost/{DB Name}", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+    .then(() => console.log("Established a connection to the database"))
+    .catch(err => console.log("Something went wrong when connecting to the database", err));

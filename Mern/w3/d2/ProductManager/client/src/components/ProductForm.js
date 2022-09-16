@@ -1,24 +1,18 @@
 import React, { useState } from 'react'
-import axios from 'axios';
-export default () => {
-    const [title, setTitle] = useState("");
-    const [price, setPrice] = useState(0);
-    const [description, setDescription] = useState("");
+
+export default props => {
+    const { initialTitle, initialPrice, initialDescription, onSubmitProp } = props;
+    const [title, setTitle] = useState(initialTitle);
+    const [price, setPrice] = useState(initialPrice);
+    const [description, setDescription] = useState(initialDescription);
 
     const onSubmitHandler = e => {
-        // e.preventDefault(); //how to display new product without page refresh?
-        axios.post('http://localhost:8000/api/products/create', {
-            title,
-            price,
-            description
-        })
-            .then(res=>console.log(res))
-            .catch(err=>console.log(err))
+        e.preventDefault();
+        onSubmitProp({title, price, description});
     }
 
     return (
         <form onSubmit={onSubmitHandler}>
-            <h1>Product Manager</h1>
             <p>
                 <label>Title</label><br/>
                 <input type="text" onChange={(e)=>setTitle(e.target.value)} value={title}/>
@@ -31,7 +25,7 @@ export default () => {
                 <label>Description</label><br/>
                 <input type="text" onChange={(e)=>setDescription(e.target.value)} value={description}/>
             </p>
-            <input type="submit" value="Create"/>
+            <input type="submit"/>
         </form>
     )
 }
