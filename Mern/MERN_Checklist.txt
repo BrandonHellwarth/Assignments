@@ -7,7 +7,7 @@ npm init -y
 npm install express
 npm install mongoose
 npm install cors
-5.
+4.
 create new file called server.js and add:
 const express = require('express');
 const cors = require('cors')
@@ -15,19 +15,20 @@ const app = express();
 require('./server/config/mongoose.config');
 app.use(cors())
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 require('./server/routes/author.routes')(app);
 const port = 8000;
     
 app.listen(port, () => console.log(`Listening on port: ${port}`) );
-6.
+5.
 create server folder with config, controllers, models, and routes folders as children
-7.
+6.
 npx create-react-app client
-8.
+7.
 (install in client directory)
 npm install axios
 npm install react-router-dom
-9.
+8.
 Mongoose.config.js
 const mongoose = require('mongoose');
 mongoose.connect("mongodb://localhost/{DB Name}", {
